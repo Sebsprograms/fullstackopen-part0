@@ -1,0 +1,9 @@
+sequenceDiagram
+    Browser->>+Server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    Server-->>-Browser: Html 
+    Browser->>+Server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    Server-->>-Browser: main.css
+    Browser->>+Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    Server-->>-Browser: spa.js
+    Browser->>+Server: POST new note to notes
+    Server-->>-Browser: 201 response, no refresh
