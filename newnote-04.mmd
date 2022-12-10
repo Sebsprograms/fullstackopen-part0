@@ -1,0 +1,9 @@
+sequenceDiagram
+    Browser->>+Server: POST with new_note
+    Server-->>-Browser: 302 Response URL redirect, triggering next GET
+    Browser->>+Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    Server-->>-Browser: Html 
+    Browser->>+Server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    Server-->>-Browser: main.css
+    Browser->>+Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    Server-->>-Browser: main.js
